@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title>DECKARD ART GALLERY - ALL COLLECTIONS</title>
+</head>
+<body>
+	<H1>DECKARD ART GALLERY</H1>
+	<h3>ALL COLLECTIONS</h3>
+	<ul>
+      <% for x in @col%>
+	<li>
+	  <td><font size="3" face="calibri" color="black"><a href ="/collections/<%= x.id%>"><%= x.name %></a></td>
+	  <td>  |  <font size="2" face="calibri" color="black"><a href="/collections/<%= x.id%>" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></td>
+	</li>
+	<% end %>
+	</ul>
+<h2><font size="2" face="calibri" color="black">
+<p><a href = "/collections/new">Create New Collection</a></p></font></h2>
+
+
+</body>
+</html>

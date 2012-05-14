@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>ARTWORK</title>
+<%= javascript_include_tag :all %>
+</head>
+<body>
+	<h3>ARTWORK</h3>
+	<ul>
+      <% for x in @art%>
+		<li>
+			<td><font size="3" face="calibri" color="black"><b>Title:</b> <%= x.title %></td>
+		<td><font size="3" face="calibri" color="black"><b>Image:</b> <%= x.image %></td>
+		<td>  |  <a href="/collections/<%= @col.id%>/artworks/<%= x.id %>" data-confirm="Are you sure?" data-method="delete" rel="nofollow"><font size="2" face="calibri" color="black">Delete</a></td>
+	</li>
+	<% end %>
+	</ul>
+	<h2><font size="2" face="calibri" color="black">
+	<p><a href = "/collections/<%= @col.id %>/artworks/new">Add Artwork</a></p></font></h2>	
+	<h2><font size="2" face="calibri" color="black">
+	<p><a href = "/collections/<%= @col.id %>">Back</a></p></font></h2>
+</body>
+</html>

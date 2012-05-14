@@ -1,0 +1,20 @@
+<html>
+<body>
+<h1>NEW COLLECTION</h1>
+<%= form_for(@col,:url=>{:action=>'create'}) do |f| %>
+
+<% @col.errors.full_messages.each do |msg| %>
+      <p><%= msg %></p>
+    <% end %>
+      
+	<p><b>Name</b><%= f.text_field :name %></p>
+	<p><b>Description</b></br><%= f.text_area :description %></p>
+
+	<p><%= f.submit "Create"%></p>
+	<% end %>
+	
+     <p><h2><font size="3" face="verdana" color="black">
+	<a href = "/collections">BACK</a></p></font></h2>
+	
+	</body>
+</html>
